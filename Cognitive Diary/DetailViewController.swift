@@ -31,11 +31,7 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         initializeHideKeyboard()
-        
-        titleTextField.placeholder = generateTitle()
-        aTextView.placeholder = "Type your thoughts"
-        bTextView.placeholder = "Type your thoughts"
-        cTextView.placeholder = "Type your thoughts"
+    
     }
     private func refreshUI()
     {
@@ -59,38 +55,15 @@ class DetailViewController: UIViewController {
 
     @IBAction func saveDiaryItem(_ sender: UIButton)
     {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        else
-        {
-            return
-        }
-
-        // 1
-        let managedContext = appDelegate.persistentContainer.viewContext
-
-        // 2
-        let entity = DiaryModel.createEntity(in_context: managedContext)!
-        let diaryItem =  DiaryModel(entity: entity, insertInto: managedContext)
-        
-        // 3
         if let text = titleTextField.text, text.isEmpty
         {
             titleTextField.text = titleTextField.placeholder
         }
-        diaryItem.title = titleTextField.text
+        diaryItem?.title = titleTextField.text
         
-        //sistemare sta porcata
-        diaryItem.a = aTextView.text
-        diaryItem.b = bTextView.text
-        diaryItem.c = cTextView.text
-
-        // 4
-        do {
-            try managedContext.save()
-            print("saved")
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
+        diaryItem?.a = aTextView.text
+        diaryItem?.b = bTextView.text
+        diaryItem?.c = cTextView.text
 
     }
     

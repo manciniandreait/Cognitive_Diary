@@ -230,8 +230,7 @@
                                 <rect key="frame" x="0.0" y="761" width="414" height="44.5"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="saveDiaryItem:" destination="beQ-VU-msN" eventType="touchUpInside" id="Jd4-Q6-QVC"/>
-                                    <action selector="saveDiaryItem:" destination="21c-EO-hPt" eventType="touchUpInside" id="YpS-ua-7rr"/>
+                                    <action selector="createAndSaveDiaryItem:" destination="beQ-VU-msN" eventType="touchUpInside" id="07R-7f-cuz"/>
                                 </connections>
                             </button>
                         </subviews>

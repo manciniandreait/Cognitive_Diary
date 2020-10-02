@@ -30,7 +30,8 @@ class ABCViewController: UIViewController {
         cTextView.placeholder = "Type your thoughts"
     }
     
-    @IBAction func saveDiaryItem(_ sender: UIButton)
+    
+    @IBAction func createAndSaveDiaryItem(_ sender: UIButton)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
         else
@@ -64,9 +65,7 @@ class ABCViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-
     }
-    
     private func generateTitle() -> String
     {
         let date = Date()
