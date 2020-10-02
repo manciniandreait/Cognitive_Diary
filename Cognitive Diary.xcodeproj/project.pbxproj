@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E12BADDC25270A8700EBA737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDB25270A8700EBA737 /* AppDelegate.swift */; };
+		E12BADDE25270A8700EBA737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDD25270A8700EBA737 /* SceneDelegate.swift */; };
+		E12BADE025270A8700EBA737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDF25270A8700EBA737 /* ViewController.swift */; };
+		E12BADE325270A8700EBA737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BADE125270A8700EBA737 /* Main.storyboard */; };
+		E12BADE625270A8700EBA737 /* Cognitive_Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E12BADE425270A8700EBA737 /* Cognitive_Diary.xcdatamodeld */; };
+		E12BADE825270A8900EBA737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BADE725270A8900EBA737 /* Assets.xcassets */; };
+		E12BADEB25270A8900EBA737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BADE925270A8900EBA737 /* LaunchScreen.storyboard */; };
+		E12BADF625270A8900EBA737 /* Cognitive_DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADF525270A8900EBA737 /* Cognitive_DiaryTests.swift */; };
+		E12BAE0125270A8900EBA737 /* Cognitive_DiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BAE0025270A8900EBA737 /* Cognitive_DiaryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E12BADF225270A8900EBA737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E12BADD025270A8700EBA737 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E12BADD725270A8700EBA737;
+			remoteInfo = "Cognitive Diary";
+		};
+		E12BADFD25270A8900EBA737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E12BADD025270A8700EBA737 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E12BADD725270A8700EBA737;
+			remoteInfo = "Cognitive Diary";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E12BADD825270A8700EBA737 /* Cognitive Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cognitive Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12BADDB25270A8700EBA737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E12BADDD25270A8700EBA737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E12BADDF25270A8700EBA737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E12BADE225270A8700EBA737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E12BADE525270A8700EBA737 /* Cognitive_Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cognitive_Diary.xcdatamodel; sourceTree = "<group>"; };
+		E12BADE725270A8900EBA737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E12BADEA25270A8900EBA737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E12BADEC25270A8900EBA737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12BADF125270A8900EBA737 /* Cognitive DiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cognitive DiaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12BADF525270A8900EBA737 /* Cognitive_DiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognitive_DiaryTests.swift; sourceTree = "<group>"; };
+		E12BADF725270A8900EBA737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12BADFC25270A8900EBA737 /* Cognitive DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cognitive DiaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12BAE0025270A8900EBA737 /* Cognitive_DiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognitive_DiaryUITests.swift; sourceTree = "<group>"; };
+		E12BAE0225270A8900EBA737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E12BADD525270A8700EBA737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12BADEE25270A8900EBA737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12BADF925270A8900EBA737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E12BADCF25270A8700EBA737 = {
+			isa = PBXGroup;
+			children = (
+				E12BADDA25270A8700EBA737 /* Cognitive Diary */,
+				E12BADF425270A8900EBA737 /* Cognitive DiaryTests */,
+				E12BADFF25270A8900EBA737 /* Cognitive DiaryUITests */,
+				E12BADD925270A8700EBA737 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E12BADD925270A8700EBA737 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E12BADD825270A8700EBA737 /* Cognitive Diary.app */,
+				E12BADF125270A8900EBA737 /* Cognitive DiaryTests.xctest */,
+				E12BADFC25270A8900EBA737 /* Cognitive DiaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E12BADDA25270A8700EBA737 /* Cognitive Diary */ = {
+			isa = PBXGroup;
+			children = (
+				E12BADDB25270A8700EBA737 /* AppDelegate.swift */,
+				E12BADDD25270A8700EBA737 /* SceneDelegate.swift */,
+				E12BADDF25270A8700EBA737 /* ViewController.swift */,
+				E12BADE125270A8700EBA737 /* Main.storyboard */,
+				E12BADE725270A8900EBA737 /* Assets.xcassets */,
+				E12BADE925270A8900EBA737 /* LaunchScreen.storyboard */,
+				E12BADEC25270A8900EBA737 /* Info.plist */,
+				E12BADE425270A8700EBA737 /* Cognitive_Diary.xcdatamodeld */,
+			);
+			path = "Cognitive Diary";
+			sourceTree = "<group>";
+		};
+		E12BADF425270A8900EBA737 /* Cognitive DiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				E12BADF525270A8900EBA737 /* Cognitive_DiaryTests.swift */,
+				E12BADF725270A8900EBA737 /* Info.plist */,
+			);
+			path = "Cognitive DiaryTests";
+			sourceTree = "<group>";
+		};
+		E12BADFF25270A8900EBA737 /* Cognitive DiaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E12BAE0025270A8900EBA737 /* Cognitive_DiaryUITests.swift */,
+				E12BAE0225270A8900EBA737 /* Info.plist */,
+			);
+			path = "Cognitive DiaryUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E12BADD725270A8700EBA737 /* Cognitive Diary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12BAE0525270A8900EBA737 /* Build configuration list for PBXNativeTarget "Cognitive Diary" */;
+			buildPhases = (
+				E12BADD425270A8700EBA737 /* Sources */,
+				E12BADD525270A8700EBA737 /* Frameworks */,
+				E12BADD625270A8700EBA737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cognitive Diary";
+			productName = "Cognitive Diary";
+			productReference = E12BADD825270A8700EBA737 /* Cognitive Diary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E12BADF025270A8900EBA737 /* Cognitive DiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12BAE0825270A8900EBA737 /* Build configuration list for PBXNativeTarget "Cognitive DiaryTests" */;
+			buildPhases = (
+				E12BADED25270A8900EBA737 /* Sources */,
+				E12BADEE25270A8900EBA737 /* Frameworks */,
+				E12BADEF25270A8900EBA737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E12BADF325270A8900EBA737 /* PBXTargetDependency */,
+			);
+			name = "Cognitive DiaryTests";
+			productName = "Cognitive DiaryTests";
+			productReference = E12BADF125270A8900EBA737 /* Cognitive DiaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E12BADFB25270A8900EBA737 /* Cognitive DiaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12BAE0B25270A8900EBA737 /* Build configuration list for PBXNativeTarget "Cognitive DiaryUITests" */;
+			buildPhases = (
+				E12BADF825270A8900EBA737 /* Sources */,
+				E12BADF925270A8900EBA737 /* Frameworks */,
+				E12BADFA25270A8900EBA737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E12BADFE25270A8900EBA737 /* PBXTargetDependency */,
+			);
+			name = "Cognitive DiaryUITests";
+			productName = "Cognitive DiaryUITests";
+			productReference = E12BADFC25270A8900EBA737 /* Cognitive DiaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E12BADD025270A8700EBA737 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					E12BADD725270A8700EBA737 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					E12BADF025270A8900EBA737 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = E12BADD725270A8700EBA737;
+					};
+					E12BADFB25270A8900EBA737 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = E12BADD725270A8700EBA737;
+					};
+				};
+			};
+			buildConfigurationList = E12BADD325270A8700EBA737 /* Build configuration list for PBXProject "Cognitive Diary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E12BADCF25270A8700EBA737;
+			productRefGroup = E12BADD925270A8700EBA737 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E12BADD725270A8700EBA737 /* Cognitive Diary */,
+				E12BADF025270A8900EBA737 /* Cognitive DiaryTests */,
+				E12BADFB25270A8900EBA737 /* Cognitive DiaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E12BADD625270A8700EBA737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BADEB25270A8900EBA737 /* LaunchScreen.storyboard in Resources */,
+				E12BADE825270A8900EBA737 /* Assets.xcassets in Resources */,
+				E12BADE325270A8700EBA737 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12BADEF25270A8900EBA737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12BADFA25270A8900EBA737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E12BADD425270A8700EBA737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BADE625270A8700EBA737 /* Cognitive_Diary.xcdatamodeld in Sources */,
+				E12BADE025270A8700EBA737 /* ViewController.swift in Sources */,
+				E12BADDC25270A8700EBA737 /* AppDelegate.swift in Sources */,
+				E12BADDE25270A8700EBA737 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12BADED25270A8900EBA737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BADF625270A8900EBA737 /* Cognitive_DiaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12BADF825270A8900EBA737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BAE0125270A8900EBA737 /* Cognitive_DiaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E12BADF325270A8900EBA737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E12BADD725270A8700EBA737 /* Cognitive Diary */;
+			targetProxy = E12BADF225270A8900EBA737 /* PBXContainerItemProxy */;
+		};
+		E12BADFE25270A8900EBA737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E12BADD725270A8700EBA737 /* Cognitive Diary */;
+			targetProxy = E12BADFD25270A8900EBA737 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E12BADE125270A8700EBA737 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E12BADE225270A8700EBA737 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E12BADE925270A8900EBA737 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E12BADEA25270A8900EBA737 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E12BAE0325270A8900EBA737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E12BAE0425270A8900EBA737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E12BAE0625270A8900EBA737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3X6J464H5;
+				INFOPLIST_FILE = "Cognitive Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "albertoazzari.Cognitive-Diary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E12BAE0725270A8900EBA737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3X6J464H5;
+				INFOPLIST_FILE = "Cognitive Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "albertoazzari.Cognitive-Diary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E12BAE0925270A8900EBA737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3X6J464H5;
+				INFOPLIST_FILE = "Cognitive DiaryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "albertoazzari.Cognitive-DiaryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cognitive Diary.app/Cognitive Diary";
+			};
+			name = Debug;
+		};
+		E12BAE0A25270A8900EBA737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3X6J464H5;
+				INFOPLIST_FILE = "Cognitive DiaryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "albertoazzari.Cognitive-DiaryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cognitive Diary.app/Cognitive Diary";
+			};
+			name = Release;
+		};
+		E12BAE0C25270A8900EBA737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3X6J464H5;
+				INFOPLIST_FILE = "Cognitive DiaryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "albertoazzari.Cognitive-DiaryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cognitive Diary";
+			};
+			name = Debug;
+		};
+		E12BAE0D25270A8900EBA737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3X6J464H5;
+				INFOPLIST_FILE = "Cognitive DiaryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "albertoazzari.Cognitive-DiaryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cognitive Diary";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E12BADD325270A8700EBA737 /* Build configuration list for PBXProject "Cognitive Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12BAE0325270A8900EBA737 /* Debug */,
+				E12BAE0425270A8900EBA737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12BAE0525270A8900EBA737 /* Build configuration list for PBXNativeTarget "Cognitive Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12BAE0625270A8900EBA737 /* Debug */,
+				E12BAE0725270A8900EBA737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12BAE0825270A8900EBA737 /* Build configuration list for PBXNativeTarget "Cognitive DiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12BAE0925270A8900EBA737 /* Debug */,
+				E12BAE0A25270A8900EBA737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12BAE0B25270A8900EBA737 /* Build configuration list for PBXNativeTarget "Cognitive DiaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12BAE0C25270A8900EBA737 /* Debug */,
+				E12BAE0D25270A8900EBA737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E12BADE425270A8700EBA737 /* Cognitive_Diary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E12BADE525270A8700EBA737 /* Cognitive_Diary.xcdatamodel */,
+			);
+			currentVersion = E12BADE525270A8700EBA737 /* Cognitive_Diary.xcdatamodel */;
+			path = Cognitive_Diary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E12BADD025270A8700EBA737 /* Project object */;
+}
