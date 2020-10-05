@@ -6,6 +6,7 @@
 //
 
 import UIKit
+ 
 
 class ABCViewController: UITableViewController
 {
@@ -19,6 +20,8 @@ class ABCViewController: UITableViewController
     
     
     let screenHeigth = UIScreen.main.bounds.height
+    
+    var delegate : diaryModelSavedDelegate?
     
     //MARK: - Override VIEW Functions
     
@@ -50,7 +53,7 @@ class ABCViewController: UITableViewController
     override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillDisappear(animated)
-        if( aTextView.text != "" && bTextView.text != "" && cTextView.text != "" )
+        if( aTextView.text != "" || bTextView.text != "" || cTextView.text != "" )
         {
             createAndSaveDiaryItem()
         }
@@ -58,17 +61,17 @@ class ABCViewController: UITableViewController
     
     //MARK: - Override TABLE Functions
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        if (indexPath.row == 0 ||  indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 5)
-        {
-            return screenHeigth*0.05
-        }
-        else
-        {
-            return screenHeigth*0.20
-        }
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+//    {
+//        if (indexPath.row == 0 ||  indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 5)
+//        {
+//            return screenHeigth*0.05
+//        }
+//        else
+//        {
+//            return screenHeigth*0.20
+//        }
+//    }
         
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
@@ -104,6 +107,7 @@ class ABCViewController: UITableViewController
         do
         {
             try managedContext.save()
+            delegate?.diaryModelSaved(diaryItem)
         }
         catch let error as NSError
         {

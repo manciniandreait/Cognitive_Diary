@@ -8,6 +8,16 @@
 import UIKit
 import CoreData
 
+
+protocol diaryModelSelectionDelegate: class
+{
+  func diaryModelSelected(_ newDiaryModel: DiaryModel)
+}
+
+protocol diaryModelSavedDelegate: class {
+    func diaryModelSaved(_ diaryItemSaved: DiaryModel)
+}
+
 class MasterViewController: UITableViewController
 {
     //MARK: - Instance Variables
@@ -87,8 +97,18 @@ class MasterViewController: UITableViewController
     }
 }
 
-protocol diaryModelSelectionDelegate: class
-{
-  func diaryModelSelected(_ newDiaryModel: DiaryModel)
+extension MasterViewController: diaryModelSavedDelegate {
+    func diaryModelSaved(_ diaryItemSaved: DiaryModel) {
+        do
+        {
+            diaryItems = try DiaryModel.fetchData() ?? []
+            tableView.reloadData()
+        }
+        catch let error as NSError
+        {
+            print("Error fetching data: \(error.localizedDescription)")
+        }
+    }
 }
+
 
