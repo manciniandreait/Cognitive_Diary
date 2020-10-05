@@ -26,6 +26,7 @@
 		E12BAE4325271AD200EBA737 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BAE4225271AD200EBA737 /* UITextViewPlaceholder.swift */; };
 		E12BAE4E25273F7600EBA737 /* ABCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BAE4C25273F7600EBA737 /* ABCViewController.swift */; };
 		E12BAE4F25273F7600EBA737 /* ABCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12BAE4D25273F7600EBA737 /* ABCViewController.xib */; };
+		E1EAA811252B470600B88B83 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EAA80F252B470600B88B83 /* TabBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E12BAE4225271AD200EBA737 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		E12BAE4C25273F7600EBA737 /* ABCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCViewController.swift; sourceTree = "<group>"; };
 		E12BAE4D25273F7600EBA737 /* ABCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ABCViewController.xib; sourceTree = "<group>"; };
+		E1EAA80F252B470600B88B83 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		E10FB1A625277CC000F8A94F /* XIB Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1EAA80F252B470600B88B83 /* TabBarViewController.xib */,
 				E10FB19B252779C300F8A94F /* MasterDetailViewController.xib */,
 				E12BAE4D25273F7600EBA737 /* ABCViewController.xib */,
 				E12BAE1925270BD500EBA737 /* DetailViewController.xib */,
@@ -308,6 +311,7 @@
 				E12BADE825270A8900EBA737 /* Assets.xcassets in Resources */,
 				E12BAE1B25270BD500EBA737 /* DetailViewController.xib in Resources */,
 				E12BAE4F25273F7600EBA737 /* ABCViewController.xib in Resources */,
+				E1EAA811252B470600B88B83 /* TabBarViewController.xib in Resources */,
 				E12BAE1425270B3000EBA737 /* MasterViewController.xib in Resources */,
 				E12BADE325270A8700EBA737 /* Main.storyboard in Resources */,
 				E10FB19D252779C300F8A94F /* MasterDetailViewController.xib in Resources */,

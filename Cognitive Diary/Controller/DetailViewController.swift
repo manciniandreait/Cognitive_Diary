@@ -13,10 +13,13 @@ class DetailViewController: UITableViewController
     
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBOutlet weak var aLabel: UILabel!
     @IBOutlet weak var aTextView: UITextView!
     
+    @IBOutlet weak var bLabel: UILabel!
     @IBOutlet weak var bTextView: UITextView!
     
+    @IBOutlet weak var cLabel: UILabel!
     @IBOutlet weak var cTextView: UITextView!
     
     let screenHeigth = UIScreen.main.bounds.height
@@ -33,7 +36,6 @@ class DetailViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self

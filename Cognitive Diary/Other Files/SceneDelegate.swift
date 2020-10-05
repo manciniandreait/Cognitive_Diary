@@ -17,12 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = window?.rootViewController as? UITabBarController,
         let splitViewController = tabBarController.viewControllers?[0] as? UISplitViewController,
         let leftNavController = splitViewController.viewControllers.first as? UINavigationController,
-        let _ = leftNavController.viewControllers.first as? MasterViewController,
+        let masterViewController = leftNavController.viewControllers.first as? MasterViewController,
         let detailViewController = (splitViewController.viewControllers.last as? UINavigationController)?.topViewController as? DetailViewController
         else { fatalError() }
-
-      detailViewController.navigationItem.leftItemsSupplementBackButton = true
-      detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        
+        masterViewController.delegate = detailViewController
+        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

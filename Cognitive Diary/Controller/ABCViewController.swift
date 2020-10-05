@@ -7,17 +7,16 @@
 
 import UIKit
 
-class ABCViewController: UITableViewController {
+class ABCViewController: UITableViewController
+{
 
     //MARK: - Instance Variables
     
     @IBOutlet weak var titleTextField: UITextField!
-    
     @IBOutlet weak var aTextView: UITextView!
-    
     @IBOutlet weak var bTextView: UITextView!
-    
     @IBOutlet weak var cTextView: UITextView!
+    
     
     let screenHeigth = UIScreen.main.bounds.height
     
@@ -39,6 +38,9 @@ class ABCViewController: UITableViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
         //invisible empty cell
         tableView.tableFooterView = UIView()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -116,6 +118,26 @@ class ABCViewController: UITableViewController {
         formatter.dateFormat = "dd/MM/yyyy HH:mm"
         let result = formatter.string(from: date)
         return "New ABC Notes - " + result
+    }
+    
+    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer)
+    {
+      guard let tabBarController = tabBarController, let viewControllers = tabBarController.viewControllers else { return }
+      let tabs = viewControllers.count
+      if gesture.direction == .left
+      {
+          if (tabBarController.selectedIndex) < tabs
+          {
+              tabBarController.selectedIndex += 1
+          }
+      }
+      else if gesture.direction == .right
+      {
+          if (tabBarController.selectedIndex) > 0
+          {
+              tabBarController.selectedIndex -= 1
+          }
+      }
     }
     
     @objc private func keyboardWillShow(notification: NSNotification)

@@ -32,10 +32,7 @@ extension MasterDetailViewController : UISplitViewControllerDelegate
 {
     //Start App with MasterViewController instead of DetailViewController
     @available(iOS 14.0, *)
-    public func splitViewController(_ svc: UISplitViewController,
-        topColumnForCollapsingToProposedTopColumn
-        proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column
-    {
+    func splitViewController(_ svc: UISplitViewController, topColumnForCollapsingToProposedTopColumn proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column {
         return .primary
     }
 

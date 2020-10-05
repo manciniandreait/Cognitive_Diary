@@ -34,6 +34,9 @@ class MasterViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
     //MARK: - Override TABLE Functions
@@ -60,6 +63,27 @@ class MasterViewController: UITableViewController
         {
           splitViewController?.showDetailViewController(detailViewController, sender: nil)
         }
+    }
+    
+    //MARK: - Supporting Function
+
+    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer)
+    {
+      guard let tabBarController = tabBarController, let viewControllers = tabBarController.viewControllers else { return }
+      let tabs = viewControllers.count
+      if gesture.direction == .left {
+          if (tabBarController.selectedIndex) < tabs
+          {
+              tabBarController.selectedIndex += 1
+          }
+      }
+      else if gesture.direction == .right
+      {
+          if (tabBarController.selectedIndex) > 0
+          {
+              tabBarController.selectedIndex -= 1
+          }
+      }
     }
 }
 
