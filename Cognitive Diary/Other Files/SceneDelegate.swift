@@ -14,17 +14,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
       guard
-        
         let tabBarController = window?.rootViewController as? UITabBarController,
         let splitViewController = tabBarController.viewControllers?[0] as? UISplitViewController,
         let leftNavController = splitViewController.viewControllers.first as? UINavigationController,
-        let masterViewController = leftNavController.viewControllers.first as? MasterViewController,
+        let _ = leftNavController.viewControllers.first as? MasterViewController,
         let detailViewController = (splitViewController.viewControllers.last as? UINavigationController)?.topViewController as? DetailViewController
         else { fatalError() }
 
-      let firstDiaryItem = masterViewController.diaryItems.first
-      detailViewController.diaryItem = firstDiaryItem
-      masterViewController.delegate = detailViewController
       detailViewController.navigationItem.leftItemsSupplementBackButton = true
       detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
     }

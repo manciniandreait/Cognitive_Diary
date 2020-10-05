@@ -7,7 +7,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UITableViewController
+{
+    //MARK: - Instance Variables
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -17,6 +19,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var cTextView: UITextView!
     
+    let screenHeigth = UIScreen.main.bounds.height
     
     var diaryItem : DiaryModel?
     {
@@ -25,37 +28,63 @@ class DetailViewController: UIViewController {
             refreshUI()
         }
     }
-    override func viewDidLoad() {
+    
+    //MARK: - Override VIEW Functions
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        initializeHideKeyboard()
-    
+        //invisible empty cell
+        tableView.tableFooterView = UIView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    override func viewWillDisappear(_ animated: Bool) {
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
         saveDiaryItem()
     }
+    
+    //MARK: - Override TABLE Functions
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if (indexPath.row == 0 ||  indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 5)
+        {
+            return screenHeigth*0.05
+        }
+        else
+        {
+            return screenHeigth*0.20
+        }
+    }
+        
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
+    //MARK: - Supporting Function
+
     private func refreshUI()
     {
         loadViewIfNeeded()
         titleTextField.text = diaryItem?.title
-        
         aTextView.text = diaryItem?.a
         bTextView.text = diaryItem?.b
         cTextView.text = diaryItem?.c
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     private func saveDiaryItem()
     {
         if let text = titleTextField.text, text.isEmpty
@@ -63,7 +92,6 @@ class DetailViewController: UIViewController {
             titleTextField.text = titleTextField.placeholder
         }
         diaryItem?.title = titleTextField.text
-        
         diaryItem?.a = aTextView.text
         diaryItem?.b = bTextView.text
         diaryItem?.c = cTextView.text
@@ -76,33 +104,28 @@ class DetailViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy HH:mm"
         let result = formatter.string(from: date)
-        
         return "New ABC Notes - " + result
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification)
+    {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
+        }
+    }
+
+    @objc private func keyboardWillHide(notification: NSNotification)
+    {
+        tableView.contentInset = .zero
     }
 }
 
 extension DetailViewController: diaryModelSelectionDelegate
 {
-  func diaryModelSelected(_ newDiaryModel: DiaryModel) {
+  func diaryModelSelected(_ newDiaryModel: DiaryModel)
+  {
     diaryItem = newDiaryModel
   }
 }
-extension DetailViewController {
-    
-    func initializeHideKeyboard(){
-        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(dismissMyKeyboard))
-        
-        //Add this tap gesture recognizer to the parent view
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissMyKeyboard(){
-        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
-        //In short- Dismiss the active keyboard.
-        view.endEditing(true)
-    }
-    
-}
+

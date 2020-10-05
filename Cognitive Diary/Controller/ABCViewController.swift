@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ABCViewController: UIViewController {
+class ABCViewController: UITableViewController {
 
+    //MARK: - Instance Variables
+    
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var aTextView: UITextView!
@@ -17,18 +19,13 @@ class ABCViewController: UIViewController {
     
     @IBOutlet weak var cTextView: UITextView!
     
+    let screenHeigth = UIScreen.main.bounds.height
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        initializeHideKeyboard()
-        
-        
-    }
+    //MARK: - Override VIEW Functions
     
     override func viewWillAppear(_ animated: Bool)
     {
+        super.viewWillAppear(animated)
         titleTextField.text = ""
         titleTextField.placeholder = generateTitle()
         aTextView.text = ""
@@ -39,80 +36,98 @@ class ABCViewController: UIViewController {
         cTextView.placeholder = "Type your thoughts"
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        //invisible empty cell
+        tableView.tableFooterView = UIView()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
-    @IBAction func createAndSaveDiaryItem(_ sender: UIButton)
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        if( aTextView.text != "" && bTextView.text != "" && cTextView.text != "" )
+        {
+            createAndSaveDiaryItem()
+        }
+    }
+    
+    //MARK: - Override TABLE Functions
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if (indexPath.row == 0 ||  indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 5)
+        {
+            return screenHeigth*0.05
+        }
+        else
+        {
+            return screenHeigth*0.20
+        }
+    }
+        
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
+    //MARK: - Supporting Function
+    
+    private func createAndSaveDiaryItem()
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
         else
         {
             return
         }
-
-        // 1
         let managedContext = appDelegate.persistentContainer.viewContext
-
-        // 2
         let entity = DiaryModel.createEntity(in_context: managedContext)!
         let diaryItem =  DiaryModel(entity: entity, insertInto: managedContext)
-        
-        // 3
         if let text = titleTextField.text, text.isEmpty
         {
             titleTextField.text = titleTextField.placeholder
         }
         diaryItem.title = titleTextField.text
-        
-        //sistemare sta porcata
         diaryItem.a = aTextView.text
         diaryItem.b = bTextView.text
         diaryItem.c = cTextView.text
-
-        // 4
-        do {
+        diaryItem.date = Date()
+        do
+        {
             try managedContext.save()
-            print("saved")
-        } catch let error as NSError {
+        }
+        catch let error as NSError
+        {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
     private func generateTitle() -> String
     {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy HH:mm"
         let result = formatter.string(from: date)
-        
         return "New ABC Notes - " + result
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension ABCViewController {
     
-    func initializeHideKeyboard(){
-        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(dismissMyKeyboard))
-        
-        //Add this tap gesture recognizer to the parent view
-        view.addGestureRecognizer(tap)
+    @objc private func keyboardWillShow(notification: NSNotification)
+    {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
+        }
     }
-    
-    @objc func dismissMyKeyboard(){
-        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
-        //In short- Dismiss the active keyboard.
-        view.endEditing(true)
+
+    @objc private func keyboardWillHide(notification: NSNotification)
+    {
+        tableView.contentInset = .zero
     }
-    
 }
