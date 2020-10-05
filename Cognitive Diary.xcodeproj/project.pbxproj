@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10FB19C252779C300F8A94F /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FB19A252779C300F8A94F /* MasterDetailViewController.swift */; };
+		E10FB19D252779C300F8A94F /* MasterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FB19B252779C300F8A94F /* MasterDetailViewController.xib */; };
 		E12BADDC25270A8700EBA737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDB25270A8700EBA737 /* AppDelegate.swift */; };
 		E12BADDE25270A8700EBA737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDD25270A8700EBA737 /* SceneDelegate.swift */; };
-		E12BADE025270A8700EBA737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDF25270A8700EBA737 /* ViewController.swift */; };
 		E12BADE325270A8700EBA737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BADE125270A8700EBA737 /* Main.storyboard */; };
 		E12BADE625270A8700EBA737 /* Cognitive_Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E12BADE425270A8700EBA737 /* Cognitive_Diary.xcdatamodeld */; };
 		E12BADE825270A8900EBA737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BADE725270A8900EBA737 /* Assets.xcassets */; };
@@ -45,10 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E10FB19A252779C300F8A94F /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
+		E10FB19B252779C300F8A94F /* MasterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterDetailViewController.xib; sourceTree = "<group>"; };
 		E12BADD825270A8700EBA737 /* Cognitive Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cognitive Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12BADDB25270A8700EBA737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E12BADDD25270A8700EBA737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E12BADDF25270A8700EBA737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E12BADE225270A8700EBA737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E12BADE525270A8700EBA737 /* Cognitive_Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cognitive_Diary.xcdatamodel; sourceTree = "<group>"; };
 		E12BADE725270A8900EBA737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,8 +66,8 @@
 		E12BAE1225270B3000EBA737 /* MasterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		E12BAE1825270BD500EBA737 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E12BAE1925270BD500EBA737 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		E12BAE2F25270EEE00EBA737 /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryModel.swift; path = "Cognitive Diary/DiaryModel.swift"; sourceTree = "<group>"; };
-		E12BAE3025270EEE00EBA737 /* DiaryModelProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryModelProperties.swift; path = "Cognitive Diary/DiaryModelProperties.swift"; sourceTree = "<group>"; };
+		E12BAE2F25270EEE00EBA737 /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		E12BAE3025270EEE00EBA737 /* DiaryModelProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModelProperties.swift; sourceTree = "<group>"; };
 		E12BAE4225271AD200EBA737 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		E12BAE4C25273F7600EBA737 /* ABCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCViewController.swift; sourceTree = "<group>"; };
 		E12BAE4D25273F7600EBA737 /* ABCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ABCViewController.xib; sourceTree = "<group>"; };
@@ -96,11 +98,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E10FB1A125277C6D00F8A94F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E10FB19A252779C300F8A94F /* MasterDetailViewController.swift */,
+				E12BAE4C25273F7600EBA737 /* ABCViewController.swift */,
+				E12BAE1825270BD500EBA737 /* DetailViewController.swift */,
+				E12BAE1125270B3000EBA737 /* MasterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E10FB1A525277C9800F8A94F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E12BADE425270A8700EBA737 /* Cognitive_Diary.xcdatamodeld */,
+				E12BAE2F25270EEE00EBA737 /* DiaryModel.swift */,
+				E12BAE3025270EEE00EBA737 /* DiaryModelProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E10FB1A625277CC000F8A94F /* XIB Files */ = {
+			isa = PBXGroup;
+			children = (
+				E10FB19B252779C300F8A94F /* MasterDetailViewController.xib */,
+				E12BAE4D25273F7600EBA737 /* ABCViewController.xib */,
+				E12BAE1925270BD500EBA737 /* DetailViewController.xib */,
+				E12BAE1225270B3000EBA737 /* MasterViewController.xib */,
+			);
+			path = "XIB Files";
+			sourceTree = "<group>";
+		};
+		E10FB1A725277CEA00F8A94F /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				E12BAE4225271AD200EBA737 /* UITextViewPlaceholder.swift */,
+				E12BADDB25270A8700EBA737 /* AppDelegate.swift */,
+				E12BADDD25270A8700EBA737 /* SceneDelegate.swift */,
+			);
+			path = "Other Files";
+			sourceTree = "<group>";
+		};
+		E10FB1A825277D1300F8A94F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E12BADE925270A8900EBA737 /* LaunchScreen.storyboard */,
+				E12BADE125270A8700EBA737 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E12BADCF25270A8700EBA737 = {
 			isa = PBXGroup;
 			children = (
-				E12BAE2F25270EEE00EBA737 /* DiaryModel.swift */,
-				E12BAE3025270EEE00EBA737 /* DiaryModelProperties.swift */,
 				E12BADDA25270A8700EBA737 /* Cognitive Diary */,
 				E12BADF425270A8900EBA737 /* Cognitive DiaryTests */,
 				E12BADFF25270A8900EBA737 /* Cognitive DiaryUITests */,
@@ -121,21 +172,13 @@
 		E12BADDA25270A8700EBA737 /* Cognitive Diary */ = {
 			isa = PBXGroup;
 			children = (
-				E12BAE4225271AD200EBA737 /* UITextViewPlaceholder.swift */,
-				E12BADDB25270A8700EBA737 /* AppDelegate.swift */,
-				E12BADDD25270A8700EBA737 /* SceneDelegate.swift */,
-				E12BADDF25270A8700EBA737 /* ViewController.swift */,
-				E12BADE125270A8700EBA737 /* Main.storyboard */,
-				E12BAE4C25273F7600EBA737 /* ABCViewController.swift */,
-				E12BAE4D25273F7600EBA737 /* ABCViewController.xib */,
-				E12BAE1825270BD500EBA737 /* DetailViewController.swift */,
-				E12BAE1925270BD500EBA737 /* DetailViewController.xib */,
-				E12BAE1125270B3000EBA737 /* MasterViewController.swift */,
-				E12BAE1225270B3000EBA737 /* MasterViewController.xib */,
+				E10FB1A525277C9800F8A94F /* Model */,
+				E10FB1A825277D1300F8A94F /* View */,
+				E10FB1A125277C6D00F8A94F /* Controller */,
+				E10FB1A725277CEA00F8A94F /* Other Files */,
+				E10FB1A625277CC000F8A94F /* XIB Files */,
 				E12BADE725270A8900EBA737 /* Assets.xcassets */,
-				E12BADE925270A8900EBA737 /* LaunchScreen.storyboard */,
 				E12BADEC25270A8900EBA737 /* Info.plist */,
-				E12BADE425270A8700EBA737 /* Cognitive_Diary.xcdatamodeld */,
 			);
 			path = "Cognitive Diary";
 			sourceTree = "<group>";
@@ -267,6 +310,7 @@
 				E12BAE4F25273F7600EBA737 /* ABCViewController.xib in Resources */,
 				E12BAE1425270B3000EBA737 /* MasterViewController.xib in Resources */,
 				E12BADE325270A8700EBA737 /* Main.storyboard in Resources */,
+				E10FB19D252779C300F8A94F /* MasterDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +337,9 @@
 			files = (
 				E12BADE625270A8700EBA737 /* Cognitive_Diary.xcdatamodeld in Sources */,
 				E12BAE3125270EEE00EBA737 /* DiaryModel.swift in Sources */,
-				E12BADE025270A8700EBA737 /* ViewController.swift in Sources */,
 				E12BAE4E25273F7600EBA737 /* ABCViewController.swift in Sources */,
 				E12BAE4325271AD200EBA737 /* UITextViewPlaceholder.swift in Sources */,
+				E10FB19C252779C300F8A94F /* MasterDetailViewController.swift in Sources */,
 				E12BAE3225270EEE00EBA737 /* DiaryModelProperties.swift in Sources */,
 				E12BAE1325270B3000EBA737 /* MasterViewController.swift in Sources */,
 				E12BAE1A25270BD500EBA737 /* DetailViewController.swift in Sources */,

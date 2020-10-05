@@ -33,6 +33,9 @@ class DetailViewController: UIViewController {
         initializeHideKeyboard()
     
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        saveDiaryItem()
+    }
     private func refreshUI()
     {
         loadViewIfNeeded()
@@ -53,7 +56,7 @@ class DetailViewController: UIViewController {
     }
     */
 
-    @IBAction func saveDiaryItem(_ sender: UIButton)
+    private func saveDiaryItem()
     {
         if let text = titleTextField.text, text.isEmpty
         {

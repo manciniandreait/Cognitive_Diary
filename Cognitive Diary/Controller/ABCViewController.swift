@@ -24,7 +24,16 @@ class ABCViewController: UIViewController {
         // Do any additional setup after loading the view.
         initializeHideKeyboard()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        titleTextField.text = ""
         titleTextField.placeholder = generateTitle()
+        aTextView.text = ""
+        bTextView.text = ""
+        cTextView.text = ""
         aTextView.placeholder = "Type your thoughts"
         bTextView.placeholder = "Type your thoughts"
         cTextView.placeholder = "Type your thoughts"

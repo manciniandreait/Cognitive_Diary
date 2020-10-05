@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7v-YS-ZQq" userLabel="ALabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A (Adversity or Activating Event )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7v-YS-ZQq" userLabel="ALabel">
                                 <rect key="frame" x="0.0" y="133" width="414" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7J-2M-hmH" userLabel="BLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B ( Your belief about the event )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7J-2M-hmH" userLabel="BLabel">
                                 <rect key="frame" x="0.0" y="357" width="414" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -42,7 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enh-kg-Ony" userLabel="CLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C ( Consequences )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enh-kg-Ony" userLabel="CLabel">
                                 <rect key="frame" x="0.0" y="581" width="414" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -60,19 +60,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MK-xS-Wq4" userLabel="SaveButton">
-                                <rect key="frame" x="0.0" y="805" width="414" height="44.5"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="saveDiaryItem:" destination="21c-EO-hPt" eventType="touchUpInside" id="miP-rm-0bv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j0a-R0-Fz3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="j0a-R0-Fz3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7J-2M-hmH" secondAttribute="trailing" symbolic="YES" id="3mL-JV-IE1"/>
-                            <constraint firstItem="5MK-xS-Wq4" firstAttribute="leading" secondItem="j0a-R0-Fz3" secondAttribute="leading" id="4Kq-fw-Wpj"/>
                             <constraint firstItem="acM-Fu-Uua" firstAttribute="width" secondItem="EE4-YT-Kck" secondAttribute="width" id="4ja-xh-cW9"/>
                             <constraint firstItem="DO8-ne-PDv" firstAttribute="width" secondItem="D7v-YS-ZQq" secondAttribute="width" id="6vO-zw-T3U"/>
                             <constraint firstItem="enh-kg-Ony" firstAttribute="leading" secondItem="j0a-R0-Fz3" secondAttribute="leading" id="9x5-9h-jdi"/>
@@ -82,7 +74,6 @@
                             <constraint firstItem="G5V-yZ-exQ" firstAttribute="width" secondItem="DO8-ne-PDv" secondAttribute="width" id="F7p-Ps-Rn5"/>
                             <constraint firstItem="DO8-ne-PDv" firstAttribute="leading" secondItem="j0a-R0-Fz3" secondAttribute="leading" id="GAu-4X-zEd"/>
                             <constraint firstItem="enh-kg-Ony" firstAttribute="height" secondItem="u7J-2M-hmH" secondAttribute="height" id="JsJ-d5-izT"/>
-                            <constraint firstItem="5MK-xS-Wq4" firstAttribute="height" secondItem="enh-kg-Ony" secondAttribute="height" id="LoQ-IA-EAZ"/>
                             <constraint firstItem="DO8-ne-PDv" firstAttribute="height" secondItem="D7v-YS-ZQq" secondAttribute="height" multiplier="4" id="M1U-Cf-KCY"/>
                             <constraint firstItem="u7J-2M-hmH" firstAttribute="top" secondItem="DO8-ne-PDv" secondAttribute="bottom" id="NHh-fJ-Qok"/>
                             <constraint firstItem="G5V-yZ-exQ" firstAttribute="leading" secondItem="j0a-R0-Fz3" secondAttribute="leading" id="Oq0-FD-fmL"/>
@@ -98,12 +89,9 @@
                             <constraint firstItem="u7J-2M-hmH" firstAttribute="width" secondItem="D7v-YS-ZQq" secondAttribute="width" id="eox-KW-ANv"/>
                             <constraint firstItem="j0a-R0-Fz3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D7v-YS-ZQq" secondAttribute="trailing" symbolic="YES" id="fB3-Uj-5aY"/>
                             <constraint firstItem="acM-Fu-Uua" firstAttribute="height" secondItem="EE4-YT-Kck" secondAttribute="height" multiplier="0.05" id="g0D-Hz-t8u"/>
-                            <constraint firstItem="j0a-R0-Fz3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5MK-xS-Wq4" secondAttribute="trailing" symbolic="YES" id="g6g-NE-6SJ"/>
-                            <constraint firstItem="5MK-xS-Wq4" firstAttribute="width" secondItem="enh-kg-Ony" secondAttribute="width" id="gIg-Qu-3XF"/>
                             <constraint firstItem="j0a-R0-Fz3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="enh-kg-Ony" secondAttribute="trailing" symbolic="YES" id="gLz-Y3-tBt"/>
                             <constraint firstItem="jQf-sN-yZy" firstAttribute="leading" secondItem="j0a-R0-Fz3" secondAttribute="leading" id="h7r-Y8-rzD"/>
                             <constraint firstItem="enh-kg-Ony" firstAttribute="top" secondItem="G5V-yZ-exQ" secondAttribute="bottom" id="j6p-Nv-jKb"/>
-                            <constraint firstItem="5MK-xS-Wq4" firstAttribute="top" secondItem="jQf-sN-yZy" secondAttribute="bottom" id="jd1-Iv-975"/>
                             <constraint firstItem="acM-Fu-Uua" firstAttribute="leading" secondItem="j0a-R0-Fz3" secondAttribute="leading" id="qrR-hR-5hy"/>
                             <constraint firstItem="acM-Fu-Uua" firstAttribute="top" secondItem="j0a-R0-Fz3" secondAttribute="top" id="wcL-zo-goR"/>
                             <constraint firstItem="D7v-YS-ZQq" firstAttribute="top" secondItem="acM-Fu-Uua" secondAttribute="bottom" id="xZM-oJ-92s"/>
@@ -187,7 +175,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmQ-Dh-wLv" userLabel="ALabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A (Adversity or Activating Event )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmQ-Dh-wLv" userLabel="ALabel">
                                 <rect key="frame" x="0.0" y="89" width="414" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -200,7 +188,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIB-c7-M2i" userLabel="BLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B ( Your belief about the event )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIB-c7-M2i" userLabel="BLabel">
                                 <rect key="frame" x="0.0" y="313" width="414" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -213,6 +201,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C ( Consequences )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6n-WW-ICa" userLabel="CLabel">
+                                <rect key="frame" x="0.0" y="537" width="414" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-fQ-ehZ" userLabel="CTextView">
                                 <rect key="frame" x="0.0" y="581.5" width="414" height="179.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -220,12 +214,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6n-WW-ICa" userLabel="CLabel">
-                                <rect key="frame" x="0.0" y="537" width="414" height="44.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH8-aP-Jbz" userLabel="SaveButton">
                                 <rect key="frame" x="0.0" y="761" width="414" height="44.5"/>
                                 <state key="normal" title="Button"/>
@@ -308,7 +296,7 @@
         <!--Home-->
         <scene sceneID="QFJ-vF-LgO">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="bRT-0n-0L6" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" id="bRT-0n-0L6" customClass="MasterDetailViewController" customModule="Cognitive_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="books.vertical.fill" catalog="system" id="J4a-Et-lxq"/>
                     <connections>
                         <segue destination="wEJ-V7-Rlr" kind="relationship" relationship="masterViewController" id="j3g-Le-eKw"/>
