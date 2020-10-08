@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0B5308D252FB3E100F14C52 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5308C252FB3E100F14C52 /* Utilities.swift */; };
 		E10FB19C252779C300F8A94F /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FB19A252779C300F8A94F /* MasterDetailViewController.swift */; };
 		E10FB19D252779C300F8A94F /* MasterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FB19B252779C300F8A94F /* MasterDetailViewController.xib */; };
 		E12BADDC25270A8700EBA737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BADDB25270A8700EBA737 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0B5308C252FB3E100F14C52 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E10FB19A252779C300F8A94F /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
 		E10FB19B252779C300F8A94F /* MasterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterDetailViewController.xib; sourceTree = "<group>"; };
 		E12BADD825270A8700EBA737 /* Cognitive Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cognitive Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 				E10FB1A625277CC000F8A94F /* XIB Files */,
 				E12BADE725270A8900EBA737 /* Assets.xcassets */,
 				E12BADEC25270A8900EBA737 /* Info.plist */,
+				E0B5308C252FB3E100F14C52 /* Utilities.swift */,
 			);
 			path = "Cognitive Diary";
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			files = (
 				E12BADE625270A8700EBA737 /* Cognitive_Diary.xcdatamodeld in Sources */,
 				E12BAE3125270EEE00EBA737 /* DiaryModel.swift in Sources */,
+				E0B5308D252FB3E100F14C52 /* Utilities.swift in Sources */,
 				E12BAE4E25273F7600EBA737 /* ABCViewController.swift in Sources */,
 				E12BAE4325271AD200EBA737 /* UITextViewPlaceholder.swift in Sources */,
 				E10FB19C252779C300F8A94F /* MasterDetailViewController.swift in Sources */,

@@ -48,6 +48,8 @@ class ABCViewController: UITableViewController
         tableView.tableFooterView = UIView()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    
     }
     
     override func viewWillDisappear(_ animated: Bool)
@@ -61,17 +63,17 @@ class ABCViewController: UITableViewController
     
     //MARK: - Override TABLE Functions
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-//    {
-//        if (indexPath.row == 0 ||  indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 5)
-//        {
-//            return screenHeigth*0.05
-//        }
-//        else
-//        {
-//            return screenHeigth*0.20
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if (indexPath.row != 0)
+        {
+            return screenHeigth*0.23
+        }
+        else
+        {
+            return screenHeigth*0.08
+        }
+    }
         
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
@@ -146,14 +148,14 @@ class ABCViewController: UITableViewController
     
     @objc private func keyboardWillShow(notification: NSNotification)
     {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
-        {
-            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
-        }
+//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+//        {
+//            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
+//        }
     }
 
     @objc private func keyboardWillHide(notification: NSNotification)
     {
-        tableView.contentInset = .zero
+//        tableView.contentInset = .zero
     }
 }

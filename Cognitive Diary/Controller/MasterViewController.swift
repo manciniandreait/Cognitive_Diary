@@ -47,6 +47,7 @@ class MasterViewController: UITableViewController
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
         swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
+        
     }
     
     //MARK: - Override TABLE Functions
@@ -54,6 +55,15 @@ class MasterViewController: UITableViewController
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return diaryItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor(rgbHexValue: "ffa726")
+        } else {
+            cell.backgroundColor = UIColor(rgbHexValue: "c77800")
+        }
+        
     }
 
     
